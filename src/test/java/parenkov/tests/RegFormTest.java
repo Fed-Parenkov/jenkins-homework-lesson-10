@@ -1,15 +1,14 @@
 package parenkov.tests;
 
 import org.junit.jupiter.api.Test;
-import parenkov.pages.RegFormWithFakerPage;
+import parenkov.pages.RegFormPage;
 
-import static com.codeborne.selenide.Selenide.open;
-import static parenkov.tests.TestData.*;
 import static io.qameta.allure.Allure.step;
+import static parenkov.tests.TestData.*;
 
-public class RegFormWithFakerTest extends TestBase{
+public class RegFormTest extends TestBase {
 
-    RegFormWithFakerPage regFormPage = new RegFormWithFakerPage();
+    RegFormPage regFormPage = new RegFormPage();
 
     @Test
     void FillRegFormTest() {
@@ -62,22 +61,5 @@ public class RegFormWithFakerTest extends TestBase{
         step("Проверить соответствие введенных данных в модальном окне", () -> {
             regFormPage.checkModalWindow();
         });
-
-
-//        regFormPage.typeFirstName()
-//                .typeLastName()
-//                .typeEmail()
-//                .selectGender(gender)
-//                .typeMobileNumber()
-//                .typeSubject(subject)
-//                .selectHobbies(hobbies)
-//                .uploadPicture();
-//        regFormPage.calendar.setDateOfBirth(day, month, year);
-//        regFormPage.scrollPage();
-//        regFormPage.typeCurrentAddress()
-//                .typeState()
-//                .typeCity();
-//        regFormPage.clickSubmit();
-//        regFormPage.checkModalWindow();
     }
 }
