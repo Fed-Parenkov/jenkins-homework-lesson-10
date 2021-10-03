@@ -84,9 +84,13 @@ public class RegFormWithFakerPage {
         return this;
     }
 
-    public RegFormWithFakerPage typeStateAndCity() {
+    public RegFormWithFakerPage typeState() {
         stateField.click();
         $("#stateCity-wrapper").$(byText(state)).click();
+        return this;
+    }
+
+    public RegFormWithFakerPage typeCity() {
         cityField.click();
         $("#stateCity-wrapper").$(byText(city)).click();
         return this;
